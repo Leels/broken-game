@@ -5,7 +5,7 @@
 <style>
 canvas {
     border:1px solid #d3d3d3;
-    background-color: #f1f1f1;
+     background-image: url("https://pictures-of-cats.org/wp-content/uploads/2019/02/Laser-pointers-are-limited.jpg");
 }
 </style>
 </head>
@@ -15,6 +15,7 @@ canvas {
 var myGamePiece;
 var myObstacles = [];
 var myScore;
+
 
 function startGame() {
     myGamePiece = new component(30, 30, "red", 10, 120);
@@ -37,6 +38,7 @@ var myGameArea = {
         this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
     }
 }
+
 
 function component(width, height, color, x, y, type) {
     this.type = type;
@@ -142,7 +144,7 @@ function moveleft() {
 function moveright() {
   myGamePiece.speedX += 1;
 }
-
+console.log();
 </script>
 <br>
 <button onmousedown="accelerate(-0.2)" onmouseup="accelerate(0.05)">ACCELERATE</button>
